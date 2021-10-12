@@ -43,7 +43,7 @@ export function Home(){
     return {
       transform: [
         { translateX: positionX.value },
-        { translateY: positionY.value }
+        { translateY: positionY.value },
       ]
     }
   });
