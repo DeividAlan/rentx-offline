@@ -5,6 +5,7 @@ import { useTheme } from 'styled-components/native';
 import { AntDesign } from '@expo/vector-icons';
 
 import { BackButton } from '../../components/BackButton';
+import { LoadAnimation } from '../../components/LoadAnimation';
 
 import { Car } from '../../components/Car';
 import { CarDTO } from '../../dtos/carDTO';
@@ -25,7 +26,6 @@ import {
  CarFooterPeriod,
  CarFooterDate
 } from './styles';
-import { Load } from '../../components/Load';
 
 interface CarProps {
   id: number;
@@ -84,7 +84,7 @@ export function MyCars(){
           Conforto, Seguranca e praticidade.
         </SubTitle>
       </Header>
-      {loading ? <Load/> : 
+      {loading ? <LoadAnimation/> : 
         <Content>
           <Appointements>
             <AppointmentsTitle>Agendamentos Feitos</AppointmentsTitle>

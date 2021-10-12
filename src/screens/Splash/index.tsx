@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/native';
 
 import  BrandSvg from '../../assets/brand.svg';
 import  LogoSvg from '../../assets/logo.svg';
