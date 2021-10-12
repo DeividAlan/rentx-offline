@@ -5,6 +5,8 @@ import { TouchableOpacityProps } from 'react-native';
 
 interface ButtonProps extends RectButtonProps {
   color?: string;
+  enabled?: boolean;
+  loading: boolean;
 }
 
 export const Container = styled(RectButton)<ButtonProps>`
@@ -15,6 +17,7 @@ export const Container = styled(RectButton)<ButtonProps>`
   justify-content: center;
 
   background-color: ${({ color, theme }) => color ? color : theme.colors.main};
+  opacity: ${({ enabled = true, loading }) => enabled === false || loading === true ? .5 : 1 };
 `;
 
 export const Title = styled.Text`
