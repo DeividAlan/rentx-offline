@@ -20,7 +20,7 @@ import {
 export function Splash(){
   const splashAnimation = useSharedValue(0);
 
-  const navegation = useNavigation();
+  const navigation = useNavigation();
 
   const brandStyles = useAnimatedStyle(() => {
     return {
@@ -53,7 +53,7 @@ export function Splash(){
   });
 
   function startApp() {
-    navegation.navigate('Home');
+    navigation.navigate('SignIn');
   };
 
   useEffect(() => {

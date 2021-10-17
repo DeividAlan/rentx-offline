@@ -40,10 +40,10 @@ export function MyCars(){
   const [loading, setLoading] = useState(true);
 
   const theme = useTheme();
-  const navegation = useNavigation();
+  const navigation = useNavigation();
 
   function handleBack() {
-    navegation.goBack();
+    navigation.goBack();
   }
 
   useEffect(() => {

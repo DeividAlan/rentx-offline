@@ -39,7 +39,7 @@ interface Params {
 }
 
 export function CarDetails(){
-  const navegation = useNavigation();
+  const navigation = useNavigation();
   const route = useRoute();
   const { car } = route.params as Params;
 
@@ -61,11 +61,11 @@ export function CarDetails(){
   });
 
   function handleConfirmRental() {
-    navegation.navigate('Scheduling', { car });
+    navigation.navigate('Scheduling', { car });
   }
 
   function handleBack() {
-    navegation.goBack();
+    navigation.goBack();
   }
 
   return (
@@ -108,8 +108,8 @@ export function CarDetails(){
           </Description>
 
           <Rent>
-            <Period>{car.rent.period}</Period>
-            <Price>{`R$ ${car.rent.price}`}</Price>
+            <Period>{car.period}</Period>
+            <Price>{`R$ ${car.price}`}</Price>
           </Rent>
         </Details>
 
